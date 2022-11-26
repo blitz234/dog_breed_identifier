@@ -67,12 +67,12 @@ def print_results(results_dic, results_stats_dic, model,
     # Summary statistics over the run
     print("{:20}: {:3d}".format('N Images', results_stats_dic['n_images']))
     print("{:20}: {:3d}".format('N Dog Images', results_stats_dic['n_dogs_img']))
-    print("{:20}: {:3d}".format('N Not-Dog Images', results_stats_dic['n_notdogs_img']))
+    print("{:20}: {:3d}\n\n".format('N Not-Dog Images', results_stats_dic['n_notdogs_img']))
 
     # Prints summary statistics over the model run
-    for key in results_dic:
+    for key in results_stats_dic:
         if 'pct' in key:
-                print("{}: {}".format(key,results_dic[key]))
+                print("{}: {}".format(key,results_stats_dic[key]))
     
     if (print_incorrect_dogs and 
         ( (results_stats_dic['n_correct_dogs'] + results_stats_dic['n_correct_notdogs'])
@@ -80,11 +80,10 @@ def print_results(results_dic, results_stats_dic, model,
        ):
          print("\nINCORRECT Dog/NOT Dog Assignments:") 
 
-         if results_dic[key][3] != results_dic[key][4]:
-
-                if results_dic[key][3] == 1:
+         for key in results_dic:
+                 if results_dic[key][3] == 1 and results_dic[key][4] == 0:
                         print("{} is a Dog - Classified as NOT-A-DOG".format(results_dic[key][0]))
-                else:
+                 elif results_dic[key][3] == 0 and results_dic[key][4] == 1:
                         print("{} is a Not-a-Dog - Classified as a-DOG".format(results_dic[key][0]))
    
    # IF print_incorrect_breed == True AND there were dogs whose breeds 

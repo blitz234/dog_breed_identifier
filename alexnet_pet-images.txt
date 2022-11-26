@@ -322,6 +322,12 @@ N Images            :  40
 N Dog Images        :  30
 N Not-Dog Images    :  10
 
+
+pct_match: 75.0
+pct_correct_dogs: 100.0
+pct_correct_breed: 80.0
+pct_correct_notdogs: 100.0
+
 INCORRECT Dog Breed Assignment:
 Real:                     beagle   Classifier:               english foxhound
 Real:                     beagle   Classifier:  walker hound, walker foxhound

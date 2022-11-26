@@ -322,11 +322,18 @@ N Images            :  40
 N Dog Images        :  30
 N Not-Dog Images    :  10
 
+
+pct_match: 82.5
+pct_correct_dogs: 100.0
+pct_correct_breed: 90.0
+pct_correct_notdogs: 90.0
+
 INCORRECT Dog/NOT Dog Assignments:
+cat is a Not-a-Dog - Classified as a-DOG
 
 INCORRECT Dog Breed Assignment:
 Real:                     beagle   Classifier:  walker hound, walker foxhound
 Real:           golden retriever   Classifier:                       leonberg
 Real:             great pyrenees   Classifier:                         kuvasz
 
-** Total Elapsed Runtime: 0:0:2
+** Total Elapsed Runtime: 0:0:1
